@@ -1,0 +1,36 @@
+- id: '1661496822742'
+  name: Working in Study Room
+  entities:
+    fan.study_room_ceiling_fan:
+      preset_modes: []
+      direction: forward
+      percentage: 1
+      percentage_step: 1
+      preset_mode:
+      friendly_name: Study Room Ceiling Fan
+      supported_features: 5
+      state: 'on'
+    light.study_room_ceiling_fan:
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - brightness
+      - color_temp
+      friendly_name: Study Room Ceiling Fan
+      supported_features: 0
+      color_mode: color_temp
+      brightness: 126
+      color_temp: 153
+      hs_color:
+      - 54.768
+      - 1.6
+      rgb_color:
+      - 255
+      - 254
+      - 250
+      xy_color:
+      - 0.326
+      - 0.333
+      state: 'on'
+  icon: mdi:chair-rolling
+  metadata: {}
