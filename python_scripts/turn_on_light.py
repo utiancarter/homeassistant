@@ -23,7 +23,7 @@ else:
     brightness = daytime_brightness_pct
     color_temp = warm_light_mireds
 
-current_weather_state = hass.states.get('weather.forecast_207a_home')
+current_weather_state = hass.states.get('weather.forecast_207a_home').state
 logger.info(f'The weather is currently {current_weather_state}')
 
 if current_weather_state in ['rainy', 'cloudy']:
