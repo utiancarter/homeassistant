@@ -14,6 +14,6 @@ python_script:
 
 logger:
   default: warning
-
-  # log level for all python scripts
-  homeassistant.components.python_script: info
+  logs:
+    # log level for all python scripts
+    homeassistant.components.python_script: info
