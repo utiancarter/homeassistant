@@ -23,7 +23,7 @@ else:
     brightness = daytime_brightness_pct
     color_temp = warm_light_mireds
 
-if hass.states.get('weather.forecast_207a_home') in ['Rainy', 'Cloudy']:
+if hass.states.get('weather.forecast_207a_home') in ['rainy', 'cloudy']:
     color_temp = daylight_mireds
 
 if entity_id is not None:
