@@ -13,15 +13,18 @@ entity_id = data.get("entity_id")
 
 # transition = 1
 
-if datetime.datetime.now().hour < 6:
+# If the time is between midnight and 7am
+if datetime.datetime.now().hour < 7:
     brightness = sleeptime_brightness_pct
     color_temp = warm_light_mireds
+# If the time is between 6am and 8pm
 elif datetime.datetime.now().hour > 20:
     brightness = nighttime_brightness_pct
-    color_temp = warm_light_mireds
+    color_temp = cool_white_mireds
+# If the time is after 8pm
 else:
-    brightness = daytime_brightness_pct
-    color_temp = warm_light_mireds
+    brightness = nighttime_brightness_pct
+    color_temp = daylight_mireds
 
 current_weather_state = hass.states.get('weather.forecast_207a_home').state
 logger.info(f'The weather is currently {current_weather_state}')
