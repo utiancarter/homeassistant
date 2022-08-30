@@ -15,7 +15,7 @@ logger.info(f'The sun is setting! These lights were found on: {", ".join(lights_
 
 for light in lights_on:
     service_data = {
-        "entity_id": light.entity_id, 
+        "entity_id": light, 
         "color_temp": warm_light_mireds, 
         "brightness_pct": nighttime_brightness_pct
         }
