@@ -134,7 +134,7 @@
       brightness: 230
       hs_color:
       - 240
-      - 100
+      - 50
       friendly_name: Study Room lights - All RGB
       supported_features: 0
       state: 'on'
