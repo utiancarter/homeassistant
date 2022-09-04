@@ -129,40 +129,13 @@
 - id: '1662281923284'
   name: Netflix in Study Room
   entities:
-    light.smart_bulb_4:
+    light.study_room_lights_all_rgb:
       color_mode: hs
       brightness: 230
       hs_color:
       - 240
       - 100
-      friendly_name: S1
-      supported_features: 0
-      state: 'on'
-    light.smart_bulb_2:
-      color_mode: hs
-      brightness: 230
-      hs_color:
-      - 240
-      - 100
-      friendly_name: S2
-      supported_features: 0
-      state: 'on'
-    light.smart_bulb_3:
-      color_mode: hs
-      brightness: 230
-      hs_color:
-      - 240
-      - 100
-      friendly_name: S3
-      supported_features: 0
-      state: 'on'
-    light.smart_bulb:
-      color_mode: hs
-      brightness: 230
-      hs_color:
-      - 240
-      - 100
-      friendly_name: S4
+      friendly_name: Study Room lights - All RGB
       supported_features: 0
       state: 'on'
     fan.study_room_ceiling_fan:
