@@ -1,1 +1,77 @@
-[]
+- id: '1661702355125'
+  alias: Start WFH day
+  description: ''
+  trigger:
+  - platform: time
+    at: 09:00:00
+  condition:
+  - condition: device
+    device_id: fcbe483953517c4cb4ba44aee4091d0d
+    domain: device_tracker
+    entity_id: device_tracker.pixel_4a
+    type: is_home
+  - condition: time
+    weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
+    before: 00:00:00
+    after: 00:00:00
+  action:
+  - service: python_script.turn_on_light
+    data:
+      entity_id: light.study_room_lights_all
+  - type: turn_on
+    device_id: 924e842b4fb32a0b1be3462d87da3d88
+    entity_id: fan.study_room_ceiling_fan
+    domain: fan
+  mode: single
+- id: '1661751992417'
+  alias: Leaving home
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - zone.home
+    attribute: persons
+    for:
+      hours: 0
+      minutes: 5
+      seconds: 0
+  condition:
+  - condition: device
+    device_id: fcbe483953517c4cb4ba44aee4091d0d
+    domain: device_tracker
+    entity_id: device_tracker.pixel_4a
+    type: is_not_home
+  - condition: device
+    device_id: 3ff4a7cbbc930fce1536c1139c387dd4
+    domain: device_tracker
+    entity_id: device_tracker.sleeping_iphone
+    type: is_not_home
+  action:
+  - service: homeassistant.turn_off
+    data: {}
+    target:
+      area_id:
+      - dining_area
+      - bedroom
+      - living_room
+      - master_bedroom
+      - study
+      - tv_area
+  mode: single
+- id: '1661871217081'
+  alias: Change lights after sunset
+  description: ''
+  trigger:
+  - platform: sun
+    event: sunset
+    offset: '1800'
+  condition: []
+  action:
+  - service: python_script.sunset_change_light_temp
+    data: {}
+  mode: single

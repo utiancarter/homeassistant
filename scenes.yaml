@@ -32,5 +32,208 @@
       - 0.326
       - 0.333
       state: 'on'
+    light.smart_bulb_4:
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - brightness
+      - color_temp
+      - hs
+      color_mode: color_temp
+      brightness: 128
+      hs_color:
+      - 54.768
+      - 1.6
+      rgb_color:
+      - 255
+      - 254
+      - 250
+      xy_color:
+      - 0.326
+      - 0.333
+      friendly_name: S1
+      supported_features: 0
+      color_temp: 153
+      state: 'on'
+    light.smart_bulb_2:
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - brightness
+      - color_temp
+      - hs
+      color_mode: color_temp
+      brightness: 128
+      hs_color:
+      - 54.768
+      - 1.6
+      rgb_color:
+      - 255
+      - 254
+      - 250
+      xy_color:
+      - 0.326
+      - 0.333
+      friendly_name: S2
+      supported_features: 0
+      color_temp: 153
+      state: 'on'
+    light.smart_bulb_3:
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - brightness
+      - color_temp
+      - hs
+      color_mode: color_temp
+      brightness: 128
+      hs_color:
+      - 54.768
+      - 1.6
+      rgb_color:
+      - 255
+      - 254
+      - 250
+      xy_color:
+      - 0.326
+      - 0.333
+      friendly_name: S3
+      supported_features: 0
+      color_temp: 153
+      state: 'on'
+    light.smart_bulb:
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - brightness
+      - color_temp
+      - hs
+      color_mode: color_temp
+      brightness: 128
+      hs_color:
+      - 54.768
+      - 1.6
+      rgb_color:
+      - 255
+      - 254
+      - 250
+      xy_color:
+      - 0.326
+      - 0.333
+      friendly_name: S4
+      supported_features: 0
+      color_temp: 153
+      state: 'on'
   icon: mdi:chair-rolling
+  metadata: {}
+- id: '1662281923284'
+  name: Netflix in Study Room
+  entities:
+    light.smart_bulb_4:
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - brightness
+      - color_temp
+      - hs
+      color_mode: hs
+      brightness: 230
+      hs_color:
+      - 240
+      - 100
+      rgb_color:
+      - 0
+      - 0
+      - 255
+      xy_color:
+      - 0.136
+      - 0.04
+      friendly_name: S1
+      supported_features: 0
+      state: 'on'
+    light.smart_bulb_2:
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - brightness
+      - color_temp
+      - hs
+      color_mode: hs
+      brightness: 230
+      hs_color:
+      - 240
+      - 100
+      rgb_color:
+      - 0
+      - 0
+      - 255
+      xy_color:
+      - 0.136
+      - 0.04
+      friendly_name: S2
+      supported_features: 0
+      state: 'on'
+    light.smart_bulb_3:
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - brightness
+      - color_temp
+      - hs
+      color_mode: hs
+      brightness: 230
+      hs_color:
+      - 240
+      - 100
+      rgb_color:
+      - 0
+      - 0
+      - 255
+      xy_color:
+      - 0.136
+      - 0.04
+      friendly_name: S3
+      supported_features: 0
+      state: 'on'
+    light.smart_bulb:
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - brightness
+      - color_temp
+      - hs
+      color_mode: hs
+      brightness: 230
+      hs_color:
+      - 240
+      - 100
+      rgb_color:
+      - 0
+      - 0
+      - 255
+      xy_color:
+      - 0.136
+      - 0.04
+      friendly_name: S4
+      supported_features: 0
+      state: 'on'
+    fan.study_room_ceiling_fan:
+      preset_modes: []
+      direction: forward
+      percentage: 1
+      percentage_step: 1
+      preset_mode:
+      friendly_name: Study Room Ceiling Fan
+      supported_features: 5
+      state: 'on'
+    light.study_room_ceiling_fan:
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - brightness
+      - color_temp
+      friendly_name: Study Room Ceiling Fan
+      supported_features: 0
+      state: 'off'
+  icon: mdi:movie
   metadata: {}
