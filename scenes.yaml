@@ -131,7 +131,8 @@
   entities:
     light.study_room_lights_all_rgb:
       color_mode: hs
-      brightness: 230
+      # brightness: 230 
+        # seems that including brightness in the yaml causes a change in color_mode to fail: https://github.com/tuya/tuya-home-assistant/issues/695
       hs_color:
       - 240
       - 50
