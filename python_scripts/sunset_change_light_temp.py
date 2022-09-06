@@ -9,8 +9,13 @@ sleeptime_brightness_pct = 20
 nighttime_brightness_pct = 60
 daytime_brightness_pct = 100
 
-# Get list of entity_ids whose state is "on", not a group, and color_mode set to color_temp
-lights_on = [light for light in hass.states.entity_ids(domain_filter = 'light') if ((hass.states.get(light).state == 'on') & ('icon' not in hass.states.get(light).keys()) & (hass.states.get(light).color_mode != 'color_temp'))]
+# Get list of entity_ids whose state is "on" and is not a group
+lights_on = [light for light in hass.states.entity_ids(domain_filter = 'light') if ((hass.states.get(light).state == 'on') & ('icon' not in hass.states.get(light).keys()))]
+
+# Remove lights which color_mode is color_temp:
+for light in lights_on:
+    if hass.states.get(light).color_mode == 'color_temp':
+        lights_on.remove(light)
 
 logger.info(f'The sun is setting! These lights were found on and set to color_temp: {", ".join(lights_on)}')
 
